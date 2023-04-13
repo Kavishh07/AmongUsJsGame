@@ -1,0 +1,93 @@
+body{
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+#naam { 
+  text-align: center;
+  padding: 5px;
+  width: 150px;
+  height: 120px;
+  color: white;
+  border: 5px solid rgb(255, 255, 255);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Alles wat te maken zal hebben met de score vormgeving zal hier in worden verwerkt. 
+1. Het scoreBoard word in het midden gecentreerd, met een border erom heen. */
+#GameScore { 
+    text-align: center;
+    padding: 5px;
+    color: white;
+    width: 50px;
+    height: 40px;
+    border: 5px dotted rgb(255, 255, 255);
+    margin: auto; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+
+
+  /* Alles wat te maken zal hebben met de vormgeving van de game div zal hier in worden verwerkt. 
+  1. De width, height & border zorgen ervoor dat er een speel vlak aan gemaakt word. 
+  2. Margin auto zorgt ervoor de div in het midden gecentreert word. 
+  3. Met de background-image(URL) word de game achtergrond erin toegevoegd. 
+  4. Verder Zorgt de background-size ervoor dat de achtergrond binnen het vlak van de game div blijft.  */
+  #game {
+    width: 600px;
+    height: 300px;
+    border: 4px solid rgb(255, 255, 255);
+    margin: auto;
+    background-image: url("https://images2.alphacoders.com/941/thumb-1920-941898.jpg");
+    background-size: cover;
+  }
+  
+ /* Alles wat te maken zal hebben met de vormgeving van de dino div zal hier in worden verwerkt. 
+ 1. De width & height geven de Grootte & breedte van de amongUs aan. 
+ 2. De top geeft de hoogte van de amongUs div aan in de game div. 
+ 3. De animation zorgt ervoor dat de amongUs 0.5s omhoog springt.   */
+  #amongUs {
+    height: 75px;
+    width: 75px;
+    top: 225px;
+    position: relative;
+    background-image: url("https://www.freepnglogos.com/uploads/among-us-png/green-among-us-png-character-0.png") ;
+    background-size: cover;
+  }
+  
+/* Alles wat te maken zal hebben met de vormgeving van het div object zal hier in worden verwerkt. 
+1. De width & height geven de Grootte & breedte vanhet div object. 
+2. De top geeft de hoogte van het div object aan in de game div. 
+3. De animation zal ervoor zorgen dat het object in een loop van 1.33s zal bewegen.
+4. De border-radius: 50% zorgt ervoor dat het object rond word. */
+#object{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 175px;
+    left: 550px;
+    background-color: rgb(255, 98, 0);
+    border-radius: 50%;
+    background-size: cover;
+    animation: object 1.33s infinite;
+    }
+
+/* Zorgt voor de beweging van het object div naar links. */
+  @keyframes object {
+    0%{left: 550px;}
+    100%{left: -50px;}
+  }
+  
+/* De jump-animation zorgt voor het springen van de amongUs div. 
+1. Door de jump-animation Springt het amongUs poppetje 0.5s omhoog. */ 
+  .jump-animation {
+    animation: jump 0.5s;
+  }
+  
+/* Zorgt voor de jump bewegingen van het amongUs div. */
+  @keyframes jump {
+    0%{top: 225px;}
+    50%{top: 75px;}
+    75%{top: 75px;}
+    100%{top: 225px;}
+  }
+  
